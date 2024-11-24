@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MBD Updates | Powerd By MBD Online</title>
+<link rel="icon" type="image/x-icon" href="https://mbduk-cdn.madebydanny.uk/icon.png">
+<script src="https://kit.fontawesome.com/0ca27f8db1.js" crossorigin="anonymous"></script>
+<style>
+    body {
+     background-color:#ddd;
+    }
+a {
+ color: red;
+}
+a:hover {
+color: yellow;
+background-color:blue;
+}
+</style>
+<body>
+  <h1>MBD Updates</h1>
+  <p>View upadets for all sites with the domain <a href="https://madebydanny.uk">madebydanny.uk</a>. 
+  <br><b>NOTE:</b> MBD updates every 3, 6 or 12 hours.</p>
+  <p>View new and past updates for MBD and see whats coming to MBD. <br><a>View Domain info.<a></p>
+  <a>Sites:</a> <a href="#mbdlink">MBD<a> | <a href="#devlink">MBD Devloper</a> | <a href="#bloglink">Blog</a> | <a href="#photolink">MBD Photos</a> <br>
+  <a>Tools:</a> <a>Domain Info</a> | <a>Site Index</a>
+  <hr>
+  <h2>Domain Info</h2>
+   <p><b> IP Location</b> United States - California - San Jose - Cloudflare Inc.</p>
+   <p><b>IP Address</b> 104.21.10.10 - 657 other sites hosted on this server</p>
+   <p><b>Dates</b><br>Created on 2024-05-10<br>
+   Expires on 2026-05-10<br>
+   Updated on 2024-09-18</p>
+   <hr>
+   <h2>Site Index</h2>
+   <p>The Site Key</p>
+   <h3>Development</h3>
+   <p>The site will be updated and/or fixed more than 3 times a week.
+   The site might break</p>
+    <h3>Stable</h3>
+    <p>The site is working with out any issues. The chance of the site crashing is low.</p>
+    <h3>Fixed</h3>
+    <p>The site is in a sate where it will update 1 to 2 times
+        a month. The desgin and/or layout of the site will never change.
+   <hr>
+  <h2 id="mbdlink">MBD</h2>
+   <p>Latency: <span id="pingmbd">Calculating...</span></p>
+   <p><div id="mbd">Connecting to api.github.com</div></p>
+   <h3>Version 4.3 [Stable]</h3>
+   <p><b>Date:</b>22/11/2024<b><br> This Version Adds:</b><br>
+    Fixed Nabar links and added more info to floater</p>
+    <script>
+        fetch('https://api.github.com/repos/therealfuntimeswithdanny/MBD')
+            .then(response => response.json())
+            .then(data => {
+                const lastUpdated = new Date(data.updated_at).toLocaleString();
+                document.getElementById('mbd').innerText = `https://madebydanny.uk was Last Updated at: ${lastUpdated}`;
+            });
+    </script>
+    <hr>
+    <h2 id="devlink">MBD Devloper [MBD DEV]</h2>
+    <p>Latency: <span id="pingdev">Calculating...</span></p>
+    <div id="dev">Connecting to api.github.com</div>
+    <h3>Version 1.3 [Development]</h3>
+   <p><b>Date:</b>20/11/2024<b><br> This Version Adds:</b><br>
+   New Home page layout</p>
+    <script>
+        fetch('https://api.github.com/repos/therealfuntimeswithdanny/MBD-DEV')
+            .then(response => response.json())
+            .then(data => {
+                const lastUpdated = new Date(data.updated_at).toLocaleString();
+                document.getElementById('dev').innerText = `https://devloper.madebydanny.uk was Last Updated at: ${lastUpdated}`;
+            });
+    </script>
+    <hr>
+    <h2 id="bloglink">Blog</h2>
+    <p>Latency: <span id="pingblog">Calculating...</span></p>
+    <div id="blog">Connecting to api.github.com</div>
+    <h3>Version 2.0 [Fixed]</h3>
+   <p><b>Date:</b>15/11/2024<b><br> This Version Adds:</b><br>
+   New Site Design and layout</p>
+    <script>
+        fetch('https://api.github.com/repos/therealfuntimeswithdanny/MBD-Blog')
+            .then(response => response.json())
+            .then(data => {
+                const lastUpdated = new Date(data.updated_at).toLocaleString();
+                document.getElementById('blog').innerText = `https://blog.madebydanny.uk was Last Updated at: ${lastUpdated}`;
+            });
+    </script>
+    <hr>
+      <h2 id="photolink">MBD Photos</h2>
+      <p>Latency: <span id="pingphoto">Calculating...</span></p>
+      <p><div id="photo">Connecting to api.github.com</div></p>
+      <h3>Version 0.1 [Development]</h3>
+      <p><b>Set Date is: </b>12/5/2024<b><br> This Version Adds:</b><br>
+       <b>MBD Photos In not out yet</b></p>
+       <script>
+           fetch('https://api.github.com/repos/therealfuntimeswithdanny/MBD-Photos')
+               .then(response => response.json())
+               .then(data => {
+                   const lastUpdated = new Date(data.updated_at).toLocaleString();
+                   document.getElementById('photo').innerText = `https://photos.madebydanny.uk was Last Updated at: ${lastUpdated}`;
+               });
+       </script>
+    <script>
+        function pingmbd() {
+            const start = Date.now();
+            fetch('https://madebydanny.uk', { mode: 'no-cors' }).then(() => {
+                const latency = Date.now() - start;
+                document.getElementById('pingmbd').innerText = latency + ' ms';
+            }).catch(() => {
+                document.getElementById('pingmbd').innerText = 'Ping failed';
+            });
+        }
+        
+        setInterval(pingmbd, 500);
+        function pingdev() {
+            const start = Date.now();
+            fetch('https://dev.madebydanny.uk', { mode: 'no-cors' }).then(() => {
+                const latency = Date.now() - start;
+                document.getElementById('pingdev').innerText = latency + ' ms';
+            }).catch(() => {
+                document.getElementById('pingdev').innerText = 'Ping failed';
+            });
+        }
+        
+        setInterval(pingdev, 500);
+        function pingblog() {
+            const start = Date.now();
+            fetch('https://blog.madebydanny.uk', { mode: 'no-cors' }).then(() => {
+                const latency = Date.now() - start;
+                document.getElementById('pingblog').innerText = latency + ' ms';
+            }).catch(() => {
+                document.getElementById('pingblog').innerText = 'Ping failed';
+            });
+        }
+        
+        setInterval(pingblog, 500);
+        function pingphoto() {
+            const start = Date.now();
+            fetch('https://photos.madebydanny.uk', { mode: 'no-cors' }).then(() => {
+                const latency = Date.now() - start;
+                document.getElementById('pingphoto').innerText = latency + ' ms';
+            }).catch(() => {
+                document.getElementById('pingphoto').innerText = 'Ping failed';
+            });
+        }
+        
+        setInterval(pingphoto, 500);
+    </script>
+</body>
